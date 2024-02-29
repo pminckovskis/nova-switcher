@@ -28,13 +28,13 @@ export default {
 
   methods: {
     toggle() {
-      console.log('confirm', this.confirm[!this.value])
       if (this.confirm[!this.value] && !confirm(this.confirm[!this.value])) {
         this.$nextTick(() => {
           this.value = !this.value
         })
         return;
       }
+      this.$emit('change', this.reverse ? !this.value : this.value)
       if (this.withoutRequest) return
       Nova.request().post('/nova-vendor/nova-switcher/toggle/' + this.resourceName, {
         value: this.reverse ? !this.value : this.value,
