@@ -28,6 +28,7 @@ export default {
 
   methods: {
     toggle() {
+      console.log('confirm', this.confirm[!this.value])
       if (this.confirm[!this.value] && !confirm(this.confirm[!this.value])) {
         this.$nextTick(() => {
           this.value = !this.value
