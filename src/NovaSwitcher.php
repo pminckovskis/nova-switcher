@@ -1,6 +1,6 @@
 <?php
 
-namespace Trin4ik\NovaSwitcher;
+namespace Clarity\NovaSwitcher;
 
 use Laravel\Nova\Fields\Boolean;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Trin4ik\NovaSwitcher;
+namespace Clarity\NovaSwitcher;
 
 use Laravel\Nova\Http\Requests\ResourceDetailRequest;
 
@@ -8,21 +8,20 @@ class SwitchController
 {
     public function __invoke (ResourceDetailRequest $request)
     {
-        $resourceClass = $request->resource();
-        $modelClass = $resourceClass::$model;
-        $model = $modelClass::withoutGlobalScopes()->find($request->post('resourceId'));
+        $success = false;
 
-        if($model) {
-            $model->{$request->post('fieldName')} = (bool)$request->post('value');
-            $model->save();
+        if ($request->resource()) {
+            $resourceClass = $request->resource();
+            $modelClass = $resourceClass::$model;
+            $model = $modelClass::withoutGlobalScopes()->find($request->post('resourceId'));
 
-            return [
-                'success' => true
-            ];
+            if($model) {
+                $model->{$request->post('fieldName')} = (bool)$request->post('value');
+                $model->save();
+                $success = true;
+            }
         }
 
-        return [
-            'success' => false
-        ];
+        return compact('success');
     }
 }

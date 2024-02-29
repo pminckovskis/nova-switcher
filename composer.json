@@ -1,5 +1,5 @@
 {
-    "name": "trin4ik/nova-switcher",
+    "name": "clarity/nova-switcher",
     "description": "A Laravel Nova switcher field.",
     "keywords": [
         "laravel",
@@ -12,13 +12,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Trin4ik\\NovaSwitcher\\": "src/"
+            "Clarity\\NovaSwitcher\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Trin4ik\\NovaSwitcher\\FieldServiceProvider"
+                "Clarity\\NovaSwitcher\\FieldServiceProvider"
             ]
         }
     },

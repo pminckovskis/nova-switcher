@@ -6,18 +6,18 @@ Work on Index/Detail view with xhr, on Form like checkbox.
 
 ## Installation
 ```bash
-composer require trin4ik/nova-switcher
+composer require pminckovskis/nova-switcher
 ```
 
 ## Usage
 ```php
-use Trin4ik\NovaSwitcher\NovaSwitcher;
+use Clarity\NovaSwitcher\NovaSwitcher;
 ...
 NovaSwitcher::make('Active');
 ```
 ### Labels
 ```php
-use Trin4ik\NovaSwitcher\NovaSwitcher;
+use Clarity\NovaSwitcher\NovaSwitcher;
 ...
 NovaSwitcher::make('Active')
     ->trueLabel('On')
@@ -28,7 +28,7 @@ NovaSwitcher::make('Active')
 ```
 ### Confirmation
 ```php
-use Trin4ik\NovaSwitcher\NovaSwitcher;
+use Clarity\NovaSwitcher\NovaSwitcher;
 ...
 NovaSwitcher::make('Active')
     ->confirmToTrue('enable?')
@@ -39,7 +39,7 @@ NovaSwitcher::make('Active')
 ```
 of couse, you can only use confirmation dialogue to enable, or disable:
 ```php
-use Trin4ik\NovaSwitcher\NovaSwitcher;
+use Clarity\NovaSwitcher\NovaSwitcher;
 ...
 NovaSwitcher::make('Active')
     ->confirmToFalse('Turn it off?');
@@ -52,5 +52,4 @@ NovaSwitcher::make('Active')
 ```
 
 ## Thanks to...
-- [David Piesse](https://github.com/davidpiesse), based on https://github.com/davidpiesse/nova-toggle
-- [Thomas Lombart](https://dev.to/thomaslombart/how-to-build-a-reusable-and-accessible-toggle-switch-with-vue-3hh7) for the switcher css
+- [Trin4ik](https://github.com/trin4ik), based on https://github.com/trin4ik/nova-switcher

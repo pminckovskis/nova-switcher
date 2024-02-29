@@ -1,6 +1,6 @@
 <?php
 
-namespace Trin4ik\NovaSwitcher;
+namespace Clarity\NovaSwitcher;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
