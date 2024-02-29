@@ -3,7 +3,7 @@
     <input
         class="input"
         type="checkbox"
-        :checked="value"
+        v-model="value"
         @change="toggle"
     />
     <span class="switch"></span>
@@ -28,6 +28,7 @@ export default {
 
   methods: {
     toggle() {
+      this.value = !this.value
       if (this.confirm[!this.value] && !confirm(this.confirm[!this.value])) {
         this.$nextTick(() => {
           this.value = !this.value
