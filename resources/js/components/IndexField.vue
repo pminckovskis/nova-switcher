@@ -3,7 +3,7 @@
     <input
         class="input"
         type="checkbox"
-        v-model="value"
+        :checked="value"
         @change="toggle"
     />
     <span class="switch"></span>
