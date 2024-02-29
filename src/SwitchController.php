@@ -10,16 +10,14 @@ class SwitchController
     {
         $success = false;
 
-        if ($request->resource()) {
-            $resourceClass = $request->resource();
-            $modelClass = $resourceClass::$model;
-            $model = $modelClass::withoutGlobalScopes()->find($request->post('resourceId'));
+        $resourceClass = $request->resource();
+        $modelClass = $resourceClass::$model;
+        $model = $modelClass::withoutGlobalScopes()->find($request->post('resourceId'));
 
-            if($model) {
-                $model->{$request->post('fieldName')} = (bool)$request->post('value');
-                $model->save();
-                $success = true;
-            }
+        if($model) {
+            $model->{$request->post('fieldName')} = (bool)$request->post('value');
+            $model->save();
+            $success = true;
         }
 
         return compact('success');
