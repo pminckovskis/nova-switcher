@@ -34,7 +34,6 @@ export default {
         })
         return;
       }
-      console.log(this.value);
       this.$emit('change', this.reverse ? !this.value : this.value)
       if (this.withoutRequest) return
       Nova.request().post('/nova-vendor/nova-switcher/toggle/' + this.resourceName, {
