@@ -1,5 +1,5 @@
 {
-    "name": "clarity/nova-switcher",
+    "name": "pminckovskis/nova-switcher",
     "description": "A Laravel Nova switcher field.",
     "keywords": [
         "laravel",
